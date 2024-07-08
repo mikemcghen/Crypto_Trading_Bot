@@ -16,5 +16,11 @@
         "symbol": "BTC",
         "price": 68319,
         "quantity": 0.01
+    },
+    {
+        "action": "buy",
+        "symbol": "BTC",
+        "price": 66914,
+        "quantity": 0.01
     }
 ]
