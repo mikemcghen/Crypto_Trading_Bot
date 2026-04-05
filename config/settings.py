@@ -9,7 +9,7 @@ from dataclasses import dataclass
 @dataclass
 class TradingConfig:
     # Signal score thresholds
-    REQUIRED_SIGNAL_SCORE: float = 2.5  # Lowered from 4.0 to generate more signals
+    REQUIRED_SIGNAL_SCORE: float = 1.75  # Moderate - triggers on single strong signal
     MAX_POSSIBLE_SCORE: float = 8.0
 
     # Funding rate thresholds (per 8-hour period)
