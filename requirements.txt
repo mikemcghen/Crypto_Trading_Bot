@@ -1,0 +1,8 @@
+pandas
+numpy
+requests
+scikit-learn
+joblib
+vaderSentiment
+pynacl
+python-dotenv
