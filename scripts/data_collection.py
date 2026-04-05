@@ -59,12 +59,21 @@ def fetch_sentiment_data(query, from_date, to_date, api_key):
     return pd.DataFrame(sentiment_data)
 # Example usage
 if __name__ == "__main__":
+    import os
+    from dotenv import load_dotenv
+
+    load_dotenv()
+    API_KEY = os.getenv('NEWS_API_KEY')
+
+    if not API_KEY:
+        print("Error: NEWS_API_KEY not found in environment variables")
+        exit(1)
+
     # Fetch historical data (limited to the past 365 days)
     historical_data = fetch_historical_data('bitcoin', '365')
     historical_data.to_csv('data/BTCUSD_historical_data.csv')
 
     # Example parameters for sentiment data
-    API_KEY = 'pub_462677e279a904d2685e6f71f66288842ccb2'
     QUERY = 'Bitcoin'
     FROM_DATE = '2023-01-01'
     TO_DATE = '2023-12-31'
